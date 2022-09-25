@@ -1,6 +1,3 @@
-// const yargs = require('yargs');
-// const { hideBin } = require('yargs/helpers');
-
 const { program } = require('commander');
 
 const contacts = require('./contacts');
@@ -44,30 +41,3 @@ program.parse();
 
 const options = program.opts();
 invokeAction(options);
-
-//==================================================
-//пакет yargs для парса аргументов командной строки
-
-// const arr = hideBin(process.argv);
-// const { argv } = yargs(arr);
-// invokeAction(argv);
-
-//========================================================
-
-// для вызова команды через терминал с помощью indexOf
-
-// const actionIndex = process.argv.indexOf('--action');
-// if (actionIndex !== -1) {
-//   const action = process.argv[actionIndex + 1];
-//   invokeAction({ action });
-// }
-
-// invokeAction({ action: 'list' });
-// invokeAction({ action: 'get', id: '1' });
-// invokeAction({
-//   action: 'add',
-//   name: 'Anna Muller',
-//   email: 'annamuller@mail.com',
-//   phone: '(236) 458-7078',
-// });
-// invokeAction({ action: 'remove', id: 'e0waro_6hBFllmFVxmyZr' });

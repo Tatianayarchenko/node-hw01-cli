@@ -1,4 +1,3 @@
-const { error } = require('console');
 const fs = require('fs/promises');
 const path = require('path');
 const { nanoid } = require('nanoid');
@@ -15,14 +14,12 @@ async function listContacts() {
 
 async function getContactById(contactId) {
   const contacts = await listContacts();
-  //   const contactId = String(id);
   const result = contacts.find((item) => item.id === contactId);
   return result || null;
 }
 
 async function removeContact(contactId) {
   const contacts = await listContacts();
-  //   const contactId = String(id);
   const index = contacts.findIndex((item) => item.id === contactId);
   if (index === -1) {
     return null;
